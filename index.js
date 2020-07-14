@@ -1,8 +1,7 @@
 var AWS =require ('aws-sdk');
 AWS.config.region='us-east-2';
-var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
-AWS.config.credentials = credentials;
-var elasticache = new AWS.ElastiCache('memcached.w7sebn.cfg.usw2.cache.amazonaws.com:11211');
+var ep = new AWS.Endpoint('memcached.w7sebn.cfg.usw2.cache.amazonaws.com:11211');
+var elasticache = new AWS.ElastiCache({endpoint: ep});
 var params = {
   ResourceName: 'STRING_VALUE', /* required */
   Tags: [ /* required */
