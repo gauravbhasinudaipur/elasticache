@@ -1,5 +1,5 @@
 var AWS =require ('aws-sdk');
-AWS.config.region='us-east-2c';
+AWS.config.region='us-east-s2c';
 var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
 AWS.config.credentials = credentials;
 var elasticache = new AWS.ElastiCache('memcached.w7sebn.cfg.usw2.cache.amazonaws.com:11211');
